@@ -1,25 +1,25 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using PierresMarket.Models;
+using PierresMarket;
 using System;
 
 namespace PierresMarket.Tests
 {
   [TestClass]
-  public class VendorTests : IDisposable
+  public class VendorTests
   {
 
-    // public void Dispose()
-    // {
-    //   Vendor.ClearAll();
-    // }
-
     [TestMethod]
-    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
+    public void NewVendor_CreatesInstance_VendorInstance()
     {
-      Vendor newVendor = new Vendor("test vendor", "test description");
-      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
-    }
-  }
 
+      // Arrange & Act
+      Vendor newVendor = new Vendor("test vendor", "test description");
+
+      //Assert
+      Assert.IsInstanceOfType(newVendor, typeof(Vendor));
+    }
+    // }
+  }
 }
+
