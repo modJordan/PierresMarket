@@ -1,0 +1,14 @@
+@{
+  ViewData["Title"] = "Vendors List";
+}
+
+<h1>All Vendors</h1>
+<ul>
+  @foreach (var vendor in Model)
+  {
+    <li>
+      <a href="/Vendors/Details/@vendor.ID"></a>@vendor.Name</li>
+  }
+</ul>
+
+<a href="/Vendors/Create">Add a New Vendor</a>

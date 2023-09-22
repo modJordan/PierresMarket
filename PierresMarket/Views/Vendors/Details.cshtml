@@ -1,0 +1,19 @@
+@using PierresMarket.Models
+@model Vendor
+
+
+<h1>@Model.Name</h1>
+<p>@Model.Description</p>
+
+<h2>Orders:</h2>
+
+<ul>
+  @foreach (var order in Model.Orders)
+  {
+    <li>
+      @order.Title - @order.Description - @String.Format("{0:C}", order.Price) - @order.Date.ToShortDateString()
+    </li>
+  }
+</ul>
+
+<a href="/Vendors/CreateOrder/@Model.Id">Add a New Order</a>

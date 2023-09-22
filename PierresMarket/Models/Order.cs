@@ -1,6 +1,6 @@
 using System;
 
-namespace PierresMarket
+namespace PierresMarket.Models
 {
   public class Order
   {

@@ -1,0 +1,33 @@
+using PierresMarket.Models;
+using Microsoft.AspNetCore.Mvc;
+using System;
+
+public class VendorsController : Controller
+{
+
+
+  [HttpPost("create")]
+  public IActionResult Create(string name, string description)
+  {
+    Vendor myVendor = new Vendor(name, description);
+    return RedirectToAction("Index");
+
+
+    [HttpGet("details/{id}")]
+    public IActionResult Details(int id)
+    {
+      Vendor vendor = Vendor.Find(id);
+      return View(vendor);
+
+    }
+
+    [HttpPost("{vendorId}/orders")]
+    public IActionResult CreateOrder(int vendorId, string orderTitle, string orderDescription, double orderPrice, DateTime orderDate)
+    {
+      Vendor selectedVendor = Vendor.Find(vendorId);
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
+      selectedVendor.Orders.Add(newOrder);
+      return RedirectToAction("Details", new { id = vendorId });
+    }
+  }
+}
