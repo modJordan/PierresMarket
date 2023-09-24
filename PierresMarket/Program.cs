@@ -16,6 +16,8 @@ namespace PierresMarket
       app.UseHttpsRedirection();
 
       app.UseRouting();
+      app.UseStaticFiles();
+
 
       app.MapControllerRoute(
         name: "default",

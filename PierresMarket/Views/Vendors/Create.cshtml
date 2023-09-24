@@ -1,16 +1,17 @@
-@{
-  Layout = "_Layout";
-}
+<body class="container">
 
-<h1>Add a New Vendor</h1>
-<form action="/vendors/create" method="post">
-  <label for="name">Vendor Name:</label>
-  <input type="text" name="name" required />
+  <h1>Add a New Vendor</h1>
+  <form action="/vendors/create" method="post">
+    <label for="name">Vendor Name:</label>
+    <input type="text" name="name" required />
 
-  <br />
+    <br />
 
-  <label for="description">Vendor Description:</label>
-  <textarea name="description" required></textarea>
+    <label for="description">Vendor Description:</label>
+    <textarea name="description" required></textarea>
 
-  <input type="submit" value="Add Vendor" />
-</form>
+    <input type="submit" value="Add Vendor" />
+  </form>
+
+  <a href="/vendors">Back to All Vendors</a>
+</body>

@@ -4,20 +4,22 @@
 @model PierresMarket.Models.VendorViewModel
 
 
+<body class="container">
+  <h1>Vendor Details: @Model.CurrentVendor.Name</h1>
+  <p>Description: @Model.CurrentVendor.Description</p>
 
-<h1>Vendor Details: @Model.CurrentVendor.Name</h1>
-<p>Description: @Model.CurrentVendor.Description</p>
+  <h2>Orders</h2>
+  <ul>
+    @foreach (var order in Model.CurrentVendor.Orders)
+    {
+      <li>
+        @order.Title - @order.Description - $@order.Price (@order.Date.ToShortDateString())
+      </li>
+    }
+  </ul>
 
-<h2>Orders</h2>
-<ul>
-  @foreach (var order in Model.CurrentVendor.Orders)
-  {
-    <li>
-      @order.Title - @order.Description - $@order.Price (@order.Date.ToShortDateString())
-    </li>
-  }
-</ul>
+  <a href="/vendors/@Model.CurrentVendor.Id/orders/new">Add a New Order for @Model.CurrentVendor.Name</a>
+  <br>
+  <a href="/vendors">Back to All Vendors</a>
 
-<a href="/vendors/@Model.CurrentVendor.Id/orders/new">Add a New Order for @Model.CurrentVendor.Name</a>
-<br>
-<a href="/vendors">Back to All Vendors</a>
+</body>

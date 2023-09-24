@@ -4,18 +4,22 @@
   ViewData["Title"] = "All Vendors and Their Orders";
 }
 
-<h1>All Vendors and Their Orders</h1>
+<body class="container">
+  <h1>All Vendors and Their Orders</h1>
 
-@foreach (var vendor in Model)
-{
-  <h2>@vendor.Name</h2>
-  <h3>Orders:</h3>
-  <ul>
-  @foreach (var order in vendor.Orders)
-    {
-      <li>@order.Title (or any property you've defined for an order)</li>
-    }
-  </ul>
-}
+  @foreach (var vendor in Model)
+  {
+    <h2>@vendor.Name</h2>
+    <h3>Orders:</h3>
+    <ul>
+      @foreach (var order in vendor.Orders)
+      {
+        <li>@order.Title</li>
+      }
+    </ul>
+  }
 
-<a href="/">Home</a>
+
+  <a href="/" class="btn btn-primary">Home</a>
+
+</body>

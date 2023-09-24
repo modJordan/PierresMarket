@@ -4,6 +4,7 @@
 @model PierresMarket.Models.VendorViewModel
 
 
+
 <h1>All Vendors</h1>
 <ul>
   @foreach (var vendor in Model.Vendors)
@@ -15,11 +16,16 @@
   }
 </ul>
 
+<a href="/">Home</a>
+<br>
+
 <a href="/vendors/create">Add a New Vendor</a>
 <br>
-<a href="/vendors/@Model.CurrentVendor?.Id/orders/new">Create a New Order</a>
-<br>
-<a href="/vendors/allorders">See All Vendors and Their Orders</a>
 
+<a href="/vendors/allorders">See All Vendors and Their Orders</a>
 <br>
-<a href="/">Home</a>
+
+@if (Model.CurrentVendor != null)
+{
+  <a href="/vendors/@Model.CurrentVendor.Id/orders/new">Create a New Order</a>
+}

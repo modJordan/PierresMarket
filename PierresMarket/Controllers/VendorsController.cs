@@ -54,11 +54,7 @@ namespace PierresMarket.Controllers
     public ActionResult CreateOrder(int vendorId)
     {
       Vendor vendor = Vendor.Find(vendorId);
-      if (vendor == null)
-      {
-        return RedirectToAction("Index");
-      }
-      return View();
+      return View(vendor);
     }
 
 

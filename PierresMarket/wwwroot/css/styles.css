@@ -1,0 +1,33 @@
+* {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-weight: 78px;
+  background-color: darkseagreen;
+  padding: 0;
+  top: auto;
+}
+
+.container {
+  background-color: lavenderblush;
+  opacity: .8;
+  width: 70%;
+  min-height: fit-content;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: 'Libre Baskerville', serif;
+  border-style: double;
+  border-color: lavender;
+}
+
+body form {
+  border-style: groove;
+  margin-top: 30%;
+  margin: 0 auto;
+  width: 50%;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-weight: 78px;
+}
