@@ -1,9 +1,0 @@
-using PierresMarket.Models;
-
-public class HomeController : HomeController{
-
-  public IActionResult Index()
-  {
-    return View();
-  }
-}

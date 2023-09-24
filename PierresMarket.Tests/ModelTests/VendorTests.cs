@@ -1,6 +1,6 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using PierresMarket;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PierresMarket.Models;
 using System;
 
 namespace PierresMarket.Tests
@@ -19,7 +19,7 @@ namespace PierresMarket.Tests
       //Assert
       Assert.IsInstanceOfType(newVendor, typeof(Vendor));
     }
-    // }
+    }
   }
-}
+
 

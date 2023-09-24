@@ -1,0 +1,21 @@
+@model List<PierresMarket.Models.Vendor>
+
+@{
+  ViewData["Title"] = "All Vendors and Their Orders";
+}
+
+<h1>All Vendors and Their Orders</h1>
+
+@foreach (var vendor in Model)
+{
+  <h2>@vendor.Name</h2>
+  <h3>Orders:</h3>
+  <ul>
+  @foreach (var order in vendor.Orders)
+    {
+      <li>@order.Title (or any property you've defined for an order)</li>
+    }
+  </ul>
+}
+
+<a href="/">Home</a>

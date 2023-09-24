@@ -1,22 +1,23 @@
 @{
   ViewData["Title"] = "Add an Order";
 }
+@model PierresMarket.Models.Vendor
+
 
 <h1>Add an Order</h1>
-<form action="/Vendors/CreateOrder" method="post">
-<input type="hidden" name="vendorId" value="@ViewBag.VendorId" />
+<form method="post" action="/vendors/@Model.Id/orders">
 
-<label for="orderTitle">Order Title:</label>
-<input type="text" name="orderTitle" required />
+  <label for="orderTitle">Order Title:</label>
+  <input type="text" name="orderTitle" required />
 
-<label for="orderDescription">Order Description:</label>
-<textarea name="orderDescription" required></textarea>
+  <label for="orderDescription">Order Description:</label>
+  <textarea name="orderDescription" required></textarea>
 
-<label for="orderPrice">Order Price:</label>
-<input type="number" step="0.01" name="orderPrice" required />
+  <label for="orderPrice">Order Price:</label>
+  <input type="number" step="0.01" name="orderPrice" required />
 
-<label for="orderDate">Order Date:</label>
-<input type="date" name="orderDate" required />
+  <label for="orderDate">Order Date:</label>
+  <input type="date" name="orderDate" required />
 
-<input type="submit" value="Add Order" />
+  <input type="submit" value="Add Order" />
 </form>
