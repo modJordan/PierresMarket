@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PierresMarket;
+using PierresMarket.Models;
 using System;
 
 namespace PierresMarket.Tests
