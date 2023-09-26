@@ -35,7 +35,7 @@ namespace PierresMarket.Controllers
     }
 
 
-    [HttpGet("vendors/{Id}")]
+    [HttpGet("vendor/{Id}")]
     public ActionResult Details(int Id)
     {
       Vendor vendor = Vendor.Find(Id);
@@ -48,6 +48,9 @@ namespace PierresMarket.Controllers
         Vendors = Vendor.GetAll(),
         CurrentVendor = vendor
       };
+
+      // Order allOrders = new Order("title", "description", 0.00, new DateTime(2020, 1, 1));
+      // viewModel.CurrentVendor.Orders.Add(allOrders);
       return View(viewModel);
     }
 
@@ -80,4 +83,3 @@ namespace PierresMarket.Controllers
     }
   }
 }
-

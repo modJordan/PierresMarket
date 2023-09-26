@@ -1,17 +1,24 @@
-<body class="container">
+@{
+  Layout = "_Layout";
+}
 
+<body>
+  <div class="border">
   <h1>Add a New Vendor</h1>
-  <form action="/vendors/create" method="post">
+  <img src="~/images/heart_div.png">
+  <form class="formMiniBorder" action="/vendors/create" method="post">
     <label for="name">Vendor Name:</label>
     <input type="text" name="name" required />
+  
 
     <br />
 
     <label for="description">Vendor Description:</label>
     <textarea name="description" required></textarea>
 
-    <input type="submit" value="Add Vendor" />
+    <input class="hypButton" type="submit" value="Add Vendor" />
   </form>
 
   <a href="/vendors">Back to All Vendors</a>
+  </div>
 </body>

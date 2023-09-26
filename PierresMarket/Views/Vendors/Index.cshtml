@@ -1,31 +1,41 @@
 @{
   ViewData["Title"] = "Vendors List";
+  Layout = "_Layout";
 }
+
 @model PierresMarket.Models.VendorViewModel
 
 
 
-<h1>All Vendors</h1>
-<ul>
-  @foreach (var vendor in Model.Vendors)
-  {
-    <li>
-      <a href="/vendors/details/@vendor.Id">@vendor.Name</a>
-      - <a href="/vendors/@vendor.Id/orders/new">Add a New Order for @vendor.Name</a>
-    </li>
-  }
-</ul>
+<div class="border">
+  <h1>All Vendors</h1>
+  <img src="~/images/heart_div.png">
+  <div class="miniBorder">
+    <ul>
+      @foreach (var vendor in Model.Vendors)
+      {
+        <li>
+          <a href="/vendor/@vendor.Id">@vendor.Name</a>
+          - <a class="hypButton" href="/vendors/@vendor.Id/orders/new">Add a New Order for @vendor.Name</a>
+        </li>
+      }
+    </ul>
+  </div>
+  <div class="buttonContain">
 
-<a href="/">Home</a>
-<br>
+    <a class="hypButton" href="/">Home</a>
+    <br>
 
-<a href="/vendors/create">Add a New Vendor</a>
-<br>
+    <a class="hypButton" href="/vendors/create">Add a New Vendor</a>
+    <br>
 
-<a href="/vendors/allorders">See All Vendors and Their Orders</a>
-<br>
+    <a class="hypButton" href="/vendors/allorders">See All Vendors and Their Orders</a>
+    <br>
 
-@if (Model.CurrentVendor != null)
-{
-  <a href="/vendors/@Model.CurrentVendor.Id/orders/new">Create a New Order</a>
-}
+    @if (Model.CurrentVendor != null)
+    {
+      <a class="hypButton" href="/vendors/@Model.CurrentVendor.Id/orders/new">Create a New Order</a>
+    }
+  </div>
+
+</div>

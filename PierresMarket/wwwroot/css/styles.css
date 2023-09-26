@@ -1,33 +1,198 @@
-* {
+body {
   font-family: 'Lobster', cursive;
-  text-align: center;
-  font-weight: 78px;
-  background-color: darkseagreen;
-  padding: 0;
-  top: auto;
+  background: url("/images/greenHeart.jpg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  margin: 0;
+
 }
 
-.container {
-  background-color: lavenderblush;
-  opacity: .8;
-  width: 70%;
-  min-height: fit-content;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+form {
+  margin-top: 30%;
+  font-family: 'Lobster', cursive;
+  align-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  clear: left;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+input textarea {
+  clear: right;
+  margin: auto;
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  display: table-column-group;
+  background-color: antiquewhite;
+  vertical-align: baseline;
+}
+
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  color: #111;
+  cursor: pointer;
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+  height: 48px;
+  line-height: 24px;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  margin-bottom: 15px;
+  ;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+.hypButton {
+  font-family: 'Lobster', cursive;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  color: #111;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.buttonContain {
+  display: inline;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+h1 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+ul {
+  text-align: left;
+}
+
+p {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.border {
+  margin-top: 3em;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
-  font-family: 'Libre Baskerville', serif;
-  border-style: double;
-  border-color: lavender;
+  padding-bottom: 10px;
+  padding-left: 75px;
+  padding-right: 75px;
+  text-align: center;
+  border-color: linen;
+  border-width: 8px;
+  border-style: groove;
+  background-color: lavender;
+  width: fit-content;
+  height: auto;
+  opacity: 0.8;
+
 }
 
-body form {
-  border-style: groove;
-  margin-top: 30%;
-  margin: 0 auto;
-  width: 50%;
-  font-family: 'Lobster', cursive;
+.miniBorder {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
-  font-weight: 78px;
+  border-color: rgb(253, 210, 230);
+  border-width: 4px;
+  border-style: groove;
+  background-color: white;
+  width: fit-content;
+  height: auto;
+}
+
+.formMiniBorder {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 5px;
+  border-color: rgb(253, 210, 230);
+  border-width: 4px;
+  border-style: groove;
+  background-color: white;
+  width: fit-content;
+  height: auto;
+  vertical-align: baseline;
+}
+
+img {
+  margin-bottom: 30px;
+  ;
 }

@@ -1,12 +1,16 @@
 @model List<PierresMarket.Models.Vendor>
 
 @{
+  Layout = "_Layout";
   ViewData["Title"] = "All Vendors and Their Orders";
 }
 
-<body class="container">
+<body>
+  <div class="border">
   <h1>All Vendors and Their Orders</h1>
+  <img src="~/images/heart_div.png">
 
+<div class="miniBorder">
   @foreach (var vendor in Model)
   {
     <h2>@vendor.Name</h2>
@@ -18,8 +22,9 @@
       }
     </ul>
   }
+</div>
 
-
-  <a href="/" class="btn btn-primary">Home</a>
+  <a href="/" class="hypButton">Home</a>
+  </div>
 
 </body>

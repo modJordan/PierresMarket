@@ -1,25 +1,32 @@
 @{
   ViewData["Title"] = "Vendor Details";
+  Layout = "_Layout";
 }
+
 @model PierresMarket.Models.VendorViewModel
 
 
-<body class="container">
-  <h1>Vendor Details: @Model.CurrentVendor.Name</h1>
-  <p>Description: @Model.CurrentVendor.Description</p>
+<body>
+  <div class="border">
+    <h1>Vendor Details: @Model.CurrentVendor.Name</h1>
+    <img src="~/images/heart_div.png">
+    <p>Description: @Model.CurrentVendor.Description</p>
 
-  <h2>Orders</h2>
-  <ul>
-    @foreach (var order in Model.CurrentVendor.Orders)
-    {
-      <li>
-        @order.Title - @order.Description - $@order.Price (@order.Date.ToShortDateString())
-      </li>
-    }
-  </ul>
 
-  <a href="/vendors/@Model.CurrentVendor.Id/orders/new">Add a New Order for @Model.CurrentVendor.Name</a>
-  <br>
-  <a href="/vendors">Back to All Vendors</a>
+    <h2>Orders</h2>
+    <ul class="miniBorder">
+      @foreach (var order in Model.CurrentVendor.Orders)
+      {
+        <li>
+          @order.Title - @order.Description - $@order.Price (@order.Date.ToShortDateString())
+        </li>
+      }
+    </ul>
+
+    <a class="hypButton" href="/vendors/@Model.CurrentVendor.Id/orders/new">Add a New Order for @Model.CurrentVendor.Name</a>
+    <br>
+    <a class="hypButton" href="/vendors">Back to All Vendors</a>
+
+  </div>
 
 </body>

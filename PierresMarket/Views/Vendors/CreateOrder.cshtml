@@ -1,24 +1,39 @@
 @{
   ViewData["Title"] = "Add an Order";
+  Layout = "_Layout";
 }
+
 @model PierresMarket.Models.Vendor
 
-<body class="container">
-<h1>Add an Order</h1>
-<form method="post" action="/vendors/@Model.Id/orders">
+<body>
 
-  <label for="orderTitle">Order Title:</label>
-  <input type="text" name="orderTitle" required />
+  <div class="border">
+    <h1>Add an Order</h1>
+    <img src="~/images/heart_div.png">
+    <form method="post" action="/vendors/@Model.Id/orders">
+      <div class="formMiniBorder">
 
-  <label for="orderDescription">Order Description:</label>
-  <textarea name="orderDescription" required></textarea>
+        <label for="orderTitle">Order Title:</label>
+        <input type="text" name="orderTitle" required />
+        <br />
 
-  <label for="orderPrice">Order Price:</label>
-  <input type="number" step="0.01" name="orderPrice" required />
+        <label for="orderPrice">Order Price:</label>
+        <input type="number" step="0.01" name="orderPrice" required />
+        <br>
 
-  <label for="orderDate">Order Date:</label>
-  <input type="date" name="orderDate" required />
+        <label for="orderDescription">Order Description:</label>
+        <textarea name="orderDescription" required></textarea>
+        <br>
+        <br>
 
-  <input type="submit" value="Add Order" />
-</form>
+        <label for="orderDate">Order Date:</label>
+        <input type="date" name="orderDate" required />
+        <br>
+        <br>
+        <button class="button-56" type="submit" role="button">Add Order</button>
+
+      </div>
+    </form>
+
+  </div>
 </body>
