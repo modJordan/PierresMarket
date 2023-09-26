@@ -7,24 +7,27 @@
 
 <body>
   <div class="border">
-  <h1>All Vendors and Their Orders</h1>
-  <img src="~/images/heart_div.png">
+    <h1>All Vendors and Their Orders</h1>
+    <img src="~/images/heart_div.png">
 
-<div class="miniBorder">
-  @foreach (var vendor in Model)
-  {
-    <h2>@vendor.Name</h2>
-    <h3>Orders:</h3>
-    <ul>
-      @foreach (var order in vendor.Orders)
+    <div class="miniBorder">
+      @foreach (var vendor in Model)
       {
-        <li>@order.Title</li>
+        <h2>@vendor.Name</h2>
+        <h3>Orders:</h3>
+        <ul>
+          @foreach (var order in vendor.Orders)
+          {
+            <li>@order.Title</li>
+          }
+        </ul>
       }
-    </ul>
-  }
-</div>
+    </div>
 
-  <a href="/" class="hypButton">Home</a>
+    <a class="hypButton" href="/vendors">Back to All Vendors</a>
+    <br>
+
+    <a href="/" class="hypButton">Home</a>
   </div>
 
 </body>

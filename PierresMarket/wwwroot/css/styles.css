@@ -3,7 +3,7 @@ body {
   background: url("/images/greenHeart.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
-  margin: 0;
+  margin: 30px;
 
 }
 
@@ -138,23 +138,6 @@ p {
   margin-bottom: 30px;
 }
 
-.border {
-  margin-top: 3em;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 10px;
-  padding-left: 75px;
-  padding-right: 75px;
-  text-align: center;
-  border-color: linen;
-  border-width: 8px;
-  border-style: groove;
-  background-color: lavender;
-  width: fit-content;
-  height: auto;
-  opacity: 0.8;
-
-}
 
 .miniBorder {
   margin-top: 30px;
@@ -195,4 +178,23 @@ p {
 img {
   margin-bottom: 30px;
   ;
+}
+
+.border {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  padding-left: 75px;
+  padding-right: 75px;
+  text-align: center;
+  border-color: linen;
+  border-width: 8px;
+  border-style: groove;
+  background-color: lavender;
+  width: fit-content;
+  height: fit-content;
+  opacity: 0.8;
+
 }
