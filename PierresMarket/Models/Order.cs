@@ -1,5 +1,5 @@
 using System;
-using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace PierresMarket.Models
 {
@@ -11,6 +11,7 @@ namespace PierresMarket.Models
     public DateTime Date { get; }
     public int Id { get; }
     private static int _currentId = 0;
+    private static List<Order> _instances = new List<Order>();
 
     public Order(string title, string description, double price, DateTime date)
     {
@@ -19,14 +20,17 @@ namespace PierresMarket.Models
       Price = price;
       Date = date;
       Id = ++_currentId;
+      _instances.Add(this);
     }
 
-    public static Order GetAll()
+    public static List<Order> GetAll()
     {
-      Order allOrders = new Order("title", "description", 0.00, new DateTime(2020, 1, 1));
-      return allOrders;
+      return _instances;
     }
-
-
+    public static void ClearAll()
+    {
+      _instances.Clear();
+      _currentId = 0;
+    }
   }
 }
